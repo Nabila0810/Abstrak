@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Explorer Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <main class="solar-system">
+        <header class="main-header">
+            <h1>SOLAR EXPLORER</h1>
+            <span>PRO VERSION</span>
+        </header>
+
+        <nav class="sidebar">
+            <ul class="planet-menu">
+                <li data-planet="mercury"><span>Mercury</span></li>
+                <li data-planet="venus"><span>Venus</span></li>
+                <li data-planet="earth" class="active"><span>Earth</span></li>
+                <li data-planet="mars"><span>Mars</span></li>
+                <li data-planet="jupiter"><span>Jupiter</span></li>
+                <li data-planet="saturn"><span>Saturn</span></li>
+                <li data-planet="uranus"><span>Uranus</span></li>
+                <li data-planet="neptune"><span>Neptune</span></li>
+            </ul>
+        </nav>
+
+        <div class="viewport">
+            <div class="planets-container">
+
+                <div class="planet" id="mercury">
+                    <div class="atmosphere"></div>
+                    <div class="body"></div>
+                    <div class="name">MERCURY</div>
+                    <div class="info">
+                       <p>Planet terkecil dan terdekat dengan Matahari, dengan suhu permukaan yang ekstrem.</p>
+                   </div>
+               </div>
+            
+                <div class="planet" id="venus">
+                    <div class="atmosphere"></div>
+                    <div class="body"></div>
+                    <div class="name">VENUS</div>
+                    <div class="info">
+                       <p>Memiliki atmosfer beracun yang tebal, menjadikannya planet terpanas di Tata Surya.</p>
+                   </div>
+               </div>
+
+                <div class="planet" id="earth">
+                    <div class="atmosphere"></div>
+                    <div class="body"></div>
+                    <div class="name">EARTH</div>
+                    <div class="info">
+                        <p>Planet biru yang kita tinggali, satu-satunya yang diketahui memiliki kehidupan.</p>
+                    </div>
+                    <div class="moon-orbit">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+
+                <div class="planet" id="mars">
+                    <div class="atmosphere"></div>
+                    <div class="body"></div>
+                    <div class="name">MARS</div>
+                     <div class="info">
+                        <p>Dikenal sebagai Planet Merah karena kaya akan besi oksida di permukaannya.</p>
+                    </div>
+                </div>
+                
+                <div class="planet" id="jupiter">
+                     <div class="atmosphere"></div>
+                     <div class="body"></div>
+                     <div class="name">JUPITER</div>
+                     <div class="info">
+                        <p>Raksasa gas terbesar di Tata Surya, terkenal dengan Bintik Merah Besarnya.</p>
+                    </div>
+                </div>
+
+                <div class="planet" id="saturn">
+                     <div class="atmosphere"></div>
+                     <div class="body"></div>
+                     <div class="rings"></div>
+                     <div class="name">SATURN</div>
+                     <div class="info">
+                        <p>Dikenal dengan sistem cincinnya yang spektakuler yang terbuat dari es dan batu.</p>
+                    </div>
+                </div>
+
+                <div class="planet" id="uranus">
+                     <div class="atmosphere"></div>
+                     <div class="body"></div>
+                     <div class="name">URANUS</div>
+                     <div class="info">
+                        <p>Memiliki kemiringan sumbu ekstrem, membuatnya seolah "menggelinding" di orbitnya.</p>
+                    </div>
+                </div>
+
+                <div class="planet" id="neptune">
+                     <div class="atmosphere"></div>
+                     <div class="body"></div>
+                     <div class="name">NEPTUNE</div>
+                     <div class="info">
+                        <p>Planet terjauh dari Matahari, sebuah raksasa es dengan angin tercepat.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

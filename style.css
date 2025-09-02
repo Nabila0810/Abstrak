@@ -1,0 +1,273 @@
+/* GENERAL STYLING */
+:root {
+    --transition-speed: 1.2s;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes animStar {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+#stars1, #stars2, #stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+#stars1 { 
+    box-shadow: 1879px 1324px #FFF, 1431px 1806px #FFF, 535px 1318px #FFF, 1375px 1563px #FFF, 128px 1017px #FFF, 1309px 1853px #FFF, 1335px 339px #FFF, 839px 1869px #FFF, 1923px 1475px #FFF, 1024px 113px #FFF, 1788px 1891px #FFF, 715px 1818px #FFF, 119px 1037px #FFF, 638px 1198px #FFF, 133px 1543px #FFF, 1502px 109px #FFF, 1833px 1618px #FFF, 1493px 1858px #FFF, 1716px 572px #FFF, 843px 180px #FFF, 1162px 132px #FFF, 804px 582px #FFF, 1269px 1188px #FFF, 129px 1530px #FFF, 1134px 1362px #FFF, 1391px 1801px #FFF, 621px 379px #FFF, 597px 44px #FFF, 133px 128px #FFF, 1146px 1308px #FFF, 111px 455px #FFF, 1835px 1182px #FFF, 320px 1896px #FFF, 1928px 1068px #FFF, 769px 91px #FFF, 1435px 421px #FFF, 290px 106px #FFF, 1358px 973px #FFF, 826px 1682px #FFF, 1419px 1322px #FFF, 314px 1720px #FFF, 1184px 182px #FFF, 1336px 992px #FFF, 1633px 1613px #FFF, 1354px 1679px #FFF, 509px 1131px #FFF, 144px 1337px #FFF, 1105px 1827px #FFF, 1944px 1893px #FFF;
+    animation: animStar 50s linear infinite; 
+}
+
+#stars2 { 
+    box-shadow: 1968px 1007px #FFF, 78px 1461px #FFF, 125px 905px #FFF, 1383px 432px #FFF, 1445px 1292px #FFF, 1125px 1149px #FFF, 1055px 143px #FFF, 1054px 1729px #FFF, 1218px 113px #FFF, 619px 187px #FFF, 1152px 1187px #FFF, 1319px 1673px #FFF, 181px 1974px #FFF, 377px 1148px #FFF, 1099px 115px #FFF, 1782px 286px #FFF, 1159px 1013px #FFF, 122px 1785px #FFF, 1289px 1727px #FFF, 1481px 1189px #FFF, 1008px 63px #FFF, 245px 1598px #FFF, 1083px 1136px #FFF, 965px 1446px #FFF, 138px 1916px #FFF, 893px 1353px #FFF, 1632px 1854px #FFF, 1238px 1338px #FFF, 439px 1313px #FFF, 1905px 1899px #FFF, 88px 1475px #FFF, 103px 305px #FFF, 226px 1335px #FFF, 1412px 1023px #FFF, 1618px 1645px #FFF, 743px 1140px #FFF, 106px 1215px #FFF, 1233px 1568px #FFF, 1435px 789px #FFF, 48px 129px #FFF;
+    animation: animStar 100s linear infinite; 
+}
+
+#stars3 { 
+    box-shadow: 36px 143px #FFF, 1801px 123px #FFF, 1422px 1102px #FFF, 1860px 1062px #FFF, 1235px 108px #FFF, 1251px 1260px #FFF, 1279px 1242px #FFF, 1284px 1930px #FFF, 1083px 1248px #FFF, 1695px 1199px #FFF, 185px 584px #FFF, 1957px 1109px #FFF, 1214px 1034px #FFF, 595px 680px #FFF, 1017px 175px #FFF, 1832px 1421px #FFF, 1379px 1253px #FFF, 1210px 1832px #FFF, 1428px 1689px #FFF, 1713px 255px #FFF;
+    animation: animStar 150s linear infinite; 
+}
+
+
+/* MAIN LAYOUT */
+.solar-system {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.main-header {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+.main-header h1 { margin: 0; font-weight: 300; letter-spacing: 5px; }
+.main-header span { font-size: 0.8em; color: #777; }
+
+/* INOVASI: GLASSMORPHISM SIDEBAR */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    box-sizing: border-box;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.planet-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.planet-menu li {
+    padding: 15px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    position: relative;
+    transition: all 0.3s ease;
+    color: #888;
+}
+
+.planet-menu li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.planet-menu li.active {
+    color: #fff;
+    font-weight: 700;
+}
+
+.planet-menu li.active::before {
+    background-color: #61dafb;
+    border-color: #61dafb;
+    transform: translateY(-50%) scale(1.5);
+    box-shadow: 0 0 15px #61dafb;
+}
+
+/* VIEWPORT & PLANETS */
+.viewport {
+    flex-grow: 1;
+    position: relative;
+}
+
+.planets-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out; /* For mouse parallax */
+}
+
+.planet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.planet.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.planet .body {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: relative;
+    /* DIUBAH: Tambah jaraknya dari 40px menjadi 80px */
+    margin-top: 80px; 
+    background-size: cover;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    z-index: 2; /* Pastikan z-index ada jika Anda mengikuti perbaikan Saturnus */
+}
+
+.planet .atmosphere {
+    width: 380px;  /* DIUBAH: Ukuran disesuaikan dengan planet */
+    height: 380px; /* DIUBAH: Ukuran disesuaikan dengan planet */
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, transparent 60%, rgba(173, 216, 230, 0.2) 100%);
+    z-index: -1;
+    /* Hapus: 'bottom' dan 'transform' */
+}
+
+.planet .name, .planet .info {
+    text-align: center;
+    /* Hapus: 'transform' agar posisi kembali normal */
+}
+
+.planet .name {
+    font-size: 5em; /* DIUBAH: Sedikit penyesuaian ukuran font */
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(0); /* DIUBAH */
+    transition: all 0.8s ease var(--transition-speed);
+}
+.planet.active .name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.planet .info {
+    font-size: 1.1em;
+    max-width: 500px;
+    color: #aaa;
+    opacity: 0;
+    transform: translateY(0); /* DIUBAH */
+    transition: all 0.8s ease calc(var(--transition-speed) + 0.2s);
+    margin-top: 10px; /* BARU: Memberi jarak dari nama planet */
+}
+.planet.active .info {
+     opacity: 1;
+     transform: translateY(0);
+}
+
+/* PLANET SPECIFIC STYLES (Tidak ada perubahan di sini, tapi pastikan ada) */
+#mercury .body { background: radial-gradient(circle, #a9a9a9, #8c8c8c, #696969); }
+#venus .body { background: radial-gradient(circle at 70% 30%, #f5e4c3, #d4c0a1, #b59f81); }
+#earth .body { background: radial-gradient(circle at 20% 30%, #a4c9d7, #6e94aa, #3b5978, #1c2e4a); }
+#mars .body { background: radial-gradient(circle, #d68a6b, #c66c4b, #9e4a2d, #6d2f1c); }
+#jupiter .body { background: radial-gradient(circle, #e0c8a0, #d3a870, #c08c50, #8c643c); }
+#saturn .body { background: radial-gradient(circle, #f4e9be, #e9d3a2, #d6b882, #b89868); }
+#uranus .body { background: radial-gradient(circle, #d1e7e8, #a9d1d9, #82b9c7, #669bac); }
+#neptune .body { background: radial-gradient(circle, #6b86d9, #566db3, #43578f, #33436d); }
+
+
+/* ORBITS & MOONS (Diubah total untuk 2D) */
+.moon-orbit {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg); } /* DIUBAH: Animasi rotasi 2D */
+    to { transform: rotate(360deg); }
+}
+
+.moon {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #eee, #ccc, #aaa);
+    border-radius: 50%;
+    position: absolute;
+    top: -12.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#saturn .body {
+    position: relative; 
+    background: radial-gradient(circle, #f4e9be, #e9d3a2, #d6b882, #b89868);
+    /* Pastikan z-index lebih tinggi dari cincin */
+    z-index: 2; 
+}
+
+#saturn .body::after {
+    content: '';
+    position: absolute;
+    /* Ukuran cincin dibuat lebih lebar dari planet */
+    width: 180%; 
+    height: 180%;
+    /* Posisi di tengah-tengah planet */
+    top: 50%;
+    left: 50%;
+    /* Ubah dari lingkaran menjadi elips (gepeng) */
+    transform: translate(-50%, -50%) scaleY(0.4) rotate(-15deg); 
+    
+    /* Gaya visual cincin */
+    border: 30px solid rgba(200, 180, 150, 0.7);
+    border-radius: 50%;
+    box-sizing: border-box;
+    
+    /* Pastikan cincin ada di belakang planet */
+    z-index: 1; 
+}
+
